@@ -1,8 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:sweet_shop/core/gen/assets.gen.dart';
 import 'package:sweet_shop/core/theme/theme.dart';
+import 'package:sweet_shop/core/utils/app_navigator.dart';
 import 'package:sweet_shop/core/utils/check_device_size.dart';
 import 'package:sweet_shop/core/widgets/app_scaffold.dart';
+import 'package:sweet_shop/features/home_feature/presentation/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,6 +16,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(milliseconds: 1500), () {
+      appPushReplacement(context, HomeScreen());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final colors = context.theme.appColors;
