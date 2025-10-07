@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sweet_shop/core/gen/assets.gen.dart';
 import 'package:sweet_shop/core/theme/theme.dart';
+import 'package:sweet_shop/core/utils/check_device_size.dart';
 import 'package:sweet_shop/core/widgets/app_scaffold.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +20,17 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: colors.brownExtraLight,
       padding: EdgeInsets.zero,
       safeAreaTop: false,
-      body: Column(children: [Assets.images.splashHeader.image()]),
+      body: Column(
+        children: [
+          Assets.images.splashHeader.image(),
+          Assets.images.logo.image(
+            width: checkVerySmallDeviceSize(context) ? 290 : 390,
+          ),
+          Assets.images.cake.image(
+            width: checkVerySmallDeviceSize(context) ? 205 : 305,
+          ),
+        ],
+      ),
     );
   }
 }
