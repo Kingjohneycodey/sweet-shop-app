@@ -21,6 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       padding: EdgeInsets.zero,
       safeAreaTop: false,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Assets.images.splashHeader.image(),
           Assets.images.logo.image(
