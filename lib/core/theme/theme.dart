@@ -42,6 +42,7 @@ class AppTheme {
 
   static const _lightAppColors = AppColors(
     // Primary
+    // primary: Color(0xFF4169E1),
     primary: Color(0xFFFB5650),
     primaryShade1: Color(0xFFFEDDDC),
     primaryShade2: Color(0xFFFECCCA),

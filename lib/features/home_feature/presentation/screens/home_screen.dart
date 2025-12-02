@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sweet_shop/core/theme/theme.dart';
 import 'package:sweet_shop/core/widgets/app_scaffold.dart';
 import 'package:sweet_shop/core/widgets/app_svg_viewer.dart';
+import 'package:sweet_shop/features/home_feature/presentation/widgets/home_app_bar.dart';
 import 'package:sweet_shop/features/home_feature/presentation/widgets/tabs/cart_tab.dart';
 import 'package:sweet_shop/features/home_feature/presentation/widgets/tabs/orders_tab.dart';
 import 'package:sweet_shop/features/home_feature/presentation/widgets/tabs/profile_tab.dart';
@@ -41,7 +42,7 @@ class _HomeScreen extends StatelessWidget {
       const ProfileTab(),
     ];
     return AppScaffold(
-      // appBar: watch.state.selectedIndex == 0 ? HomeAppBar() : null,
+      appBar: watch.state.selectedIndex == 0 ? HomeAppBar() : null,
       body: tabs[watch.state.selectedIndex],
       padding: EdgeInsets.zero,
       bottomNavigationBar: Container(
