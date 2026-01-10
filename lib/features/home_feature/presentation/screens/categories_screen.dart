@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sweet_shop/core/theme/dimens.dart';
 import 'package:sweet_shop/core/theme/theme.dart';
+import 'package:sweet_shop/core/widgets/app_button.dart';
 import 'package:sweet_shop/core/widgets/app_scaffold.dart';
 import 'package:sweet_shop/core/widgets/app_title_widget.dart';
 import 'package:sweet_shop/core/widgets/general_app_bar.dart';
@@ -105,6 +106,21 @@ class CategoriesScreen extends StatelessWidget {
                             '\$ ${index + 1}8.00',
                             style: context.theme.appTypography.labelLarge
                                 .copyWith(fontWeight: FontWeight.bold),
+                          ),
+
+                          SizedBox(
+                            width: 100,
+                            height: 32,
+                            child: AppButton(
+                              title: 'Add to cart',
+                              onPressed: () {},
+                              margin: EdgeInsets.zero,
+                              padding: WidgetStateProperty.all<EdgeInsets>(
+                                EdgeInsets.symmetric(
+                                  horizontal: Dimens.padding,
+                                ),
+                              ),
+                            ),
                           ),
                         ],
                       ),
