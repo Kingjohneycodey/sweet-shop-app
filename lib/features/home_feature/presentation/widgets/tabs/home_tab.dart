@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sweet_shop/core/theme/dimens.dart';
 import 'package:sweet_shop/core/utils/app_navigator.dart';
 import 'package:sweet_shop/core/widgets/app_title_widget.dart';
+import 'package:sweet_shop/features/home_feature/presentation/screens/categories_screen.dart';
 import 'package:sweet_shop/features/home_feature/presentation/screens/special_offers.dart';
 import 'package:sweet_shop/features/home_feature/presentation/widgets/banner_slider_widget.dart';
 import 'package:sweet_shop/features/home_feature/presentation/widgets/categories_list.dart';
@@ -22,7 +23,12 @@ class HomeTab extends StatelessWidget {
             },
           ),
           BannerSliderWidget(),
-          AppTitleWidget(title: 'Categories', onPressed: () {}),
+          AppTitleWidget(
+            title: 'Categories',
+            onPressed: () {
+              appPush(context, CategoriesScreen());
+            },
+          ),
           CategoriesList(),
           ProductsList(),
           SizedBox(height: Dimens.largePadding),
